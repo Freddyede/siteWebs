@@ -14,6 +14,7 @@ class HomeController extends AbstractController
     {
         return $this->render('FRONT/home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'classNavbar'=>'light',
         ]);
     }
 }

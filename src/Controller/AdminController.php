@@ -17,6 +17,7 @@ class AdminController extends AbstractController
     {
         return $this->render('PAGES/admin/index.html.twig', [
             'controller_name' => 'AdminController',
+            'classNavbar'=>'dark',
         ]);
     }
 }
