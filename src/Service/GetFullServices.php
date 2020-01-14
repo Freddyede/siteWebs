@@ -8,13 +8,16 @@ class GetFullServices
         $obj = [
             'url'=>null,
             'text'=>null,
+            'navbar'=>null
         ];
-        if(explode('Controller',$className)[0] == 'Admin'){
+        if (preg_match('/Back/',$className) || preg_match('/Admin/', $className)) {
             $obj['url'] = 'app_logout';
             $obj['text'] = 'btn-danger';
+            $obj['navbar'] = 'dark';
         }else{
             $obj['url'] = 'app_login';
             $obj['text'] = 'btn-success';
+            $obj['navbar'] = 'light';
         }
         return $obj;
     }

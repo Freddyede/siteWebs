@@ -12,11 +12,11 @@ class HomeController extends AbstractController
      * @Route("/", name="home")
      */
     public function index(GetFullServices $gfs)
-    {   
+    {
+        $button = $gfs->className('HomeController');
         return $this->render('FRONT/home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'classNavbar'=>'light',
-            'classButton'=>$gfs->className('HomeController')
+            'classButton'=>$button
         ]);
     }
 }

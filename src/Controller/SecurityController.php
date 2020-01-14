@@ -25,7 +25,6 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->render('SECURITY/login.html.twig', [
             'last_username' => $lastUsername, 
-            'classNavbar'=>'light',
             'error' => $error,
             'classButton'=>$gfs->className('SecurityController')
         ]);
