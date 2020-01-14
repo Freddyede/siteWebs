@@ -9,7 +9,7 @@ class GetFullServices
             'url'=>null,
             'text'=>null,
         ];
-        if(explode('Controller',$className)[0] === 'Admin'){
+        if(explode('Controller',$className)[0] == 'Admin'){
             $obj['url'] = 'app_logout';
             $obj['text'] = 'btn-danger';
         }else{
